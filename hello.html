@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alok Kumar Rajbhar | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1ea3ad, #8a93c0);
+      color: #fff;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 20px;
+      position: relative;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 3px;
+      background: #ffd700;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 3px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #ffd700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <img src="C:\Users\Alok\OneDrive\Documents\rcb.jpg" alt="Profile Photo">
+    <h1>Hi, I'm Alok Kumar Rajbhar</h1>
+  <p>College Student | Aspiring Developer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <p style="text-align: center; max-width: 700px; margin: 20px auto;">
+    Hello! I'm a college student passionate about web development, coding, and technology.
+    I love building creative projects, exploring new technologies, and collaborating with people.
+  </p>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>My College Portfolio</p>
+    </div>
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Coming Soon</p>
+    </div>
+    <div class="project">
+      <h3>Project 3</h3>
+      <p>Coming Soon</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact Me</h2>
+  <p style="text-align: center;">
+    📧 Email: <a href="mailto:alokrajbhar398@gmail.com">alokrajbhar.com</a><br>
+    🔗 LinkedIn: <a href="https://www.linkedin.com/in/alok-kumar-rajbhar-1640b2273?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">My LinkedIn</a><br>
+    📝 Blogspot: <a href="https://alok-kumar-rajbhar-mau.blogspot.com/" target="_blank">My Blog</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 Alok Kumar Rajbhar. All rights reserved.</p>
+</footer>
+
+<script>
+  // Simple fade-in animation when sections come into view
+  const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", function() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      const elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].style.opacity = 1;
+        reveals[i].style.transform = "translateY(0)";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
